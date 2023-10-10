@@ -1,12 +1,20 @@
-void print_alphabet(void) {
-  // Print the letter 'a'.
-  _putchar('a');
+#include "main.h"
 
-  // Iterate from 2 to 26 and print the corresponding lowercase letter.
-  for (int i = 2; i <= 26; i++) {
-    _putchar('a' + i - 1);
-  }
+/**
+ *main - this main function prints text as output
+ *
+ *Return: return (0)
+ */
+int main(void)
+{
+  char school[10] = "_putchar";
 
-  // Print a newline character.
-  _putchar('\n');
+  int i;
+
+  for (i = 0; i < 8; i++)
+    {
+      _putchar(school[i]);
+    }
+  _putchar(10);
+  return (0);
 }
