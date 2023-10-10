@@ -1,20 +1,21 @@
 #include "main.h"
 
 /**
- *main - this main function prints text as output
- *
- *Return: return (0)
+ * main -  prints _putchar, followed by a new line
+ * Description print_alphabet - Entry point
+ * Return: Always 0 (Success)
  */
-int main(void)
+
+void print_alphabet(void)
 {
-  char school[10] = "_putchar";
+  char c = 'a';
 
-  int i;
-
-  for (i = 0; i < 8; i++)
+  while (c <= 'z')
     {
-      _putchar(school[i]);
+      _putchar(c);
+      c++;
+
     }
-  _putchar(10);
-  return (0);
+  _putchar('\n');
+
 }
