@@ -1,8 +1,11 @@
-int _islower(int c) {
-  for (int i = 'a'; i <= 'z'; i++) {
-    if (c == i) {
-      return 1;
-    }
-  }
-  return 0;
+#include "main.h"
+
+/**
+ * _islower - checks for the lowercase character
+ * @c: the character used to check
+ * Return: 1 if c is lowercase 0 otherwise
+ */
+int _islower(int c)
+{
+  return (c >= 'a' && c <= 'z');
 }
