@@ -2,17 +2,13 @@
 
 int _isupper(int c);
 
-int main() {
+int main(void) {
   char c;
 
-  printf("Enter a character: ");
-  scanf("%c", &c);
-
-  if (_isupper(c)) {
-    printf("%c is an uppercase character.\n", c);
-  } else {
-    printf("%c is not an uppercase character.\n", c);
-  }
+  c = 'A';
+  printf("%c: %d\n", c, _isupper(c));
+  c = 'a';
+  printf("%c: %d\n", c, _isupper(c));
 
   return 0;
 }
