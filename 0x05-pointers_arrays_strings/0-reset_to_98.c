@@ -1,40 +1,31 @@
-#include "main.h"
-#include <stdio.h>
-#include <limits.h>
-
 /**
- * reset_to_98 - Updates the value an integer pointer points to, to 98
- * @n: Pointer to an integer
- */
-void reset_to_98(int *n)
-{
-  *n = 98;
-}
-
-/**
- * main - Entry point
+ * main - checks the reset_to_98() function
  *
- * Return: 0 for success
+ * Return: Always 0.
  */
 int main(void)
 {
   int n;
 
   n = 402;
-  printf("Correct output: n = %d\n", n);
-
+  printf("n = %d\n", n);
   reset_to_98(&n);
+  printf("n = %d\n", n);
 
-  printf("Correct output: n = %d\n", n);
-
+  /* Test the reset_to_98() function with negative values. */
   n = -4096;
-  printf("Correct output: n = %d\n", n);
+  reset_to_98(&n);
+  printf("n = %d\n", n);
 
+  /* Test the reset_to_98() function with INT_MAX. */
   n = INT_MAX;
-  printf("Correct output: n = INT_MAX / n = %d\n", n);
+  reset_to_98(&n);
+  printf("n = %d\n", n);
 
+  /* Test the reset_to_98() function with INT_MIN. */
   n = INT_MIN;
-  printf("Correct output: n = INT_MIN / n = %d\n", n);
+  reset_to_98(&n);
+  printf("n = %d\n", n);
 
-  return (0); // Return SUCCESS
+  return (0);
 }
