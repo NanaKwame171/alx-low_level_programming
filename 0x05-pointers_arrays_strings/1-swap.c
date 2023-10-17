@@ -1,13 +1,32 @@
 #include "main.h"
+#include <stdio.h>
+#include <limits.h>
 
 /**
- * swap_int - Swaps the values of two integers.
- * @a: Pointer to the first integer.
- * @b: Pointer to the second integer.
+ * main - Entry point
+ *
+ * Return: 0 for success
  */
-void swap_int(int *a, int *b)
+int main(void)
 {
-  int temp = *a;
-  *a = *b;
-  *b = temp;
+  int a;
+  int b;
+
+  a = 98;
+  b = 42;
+  printf("Correct output: a = %d; b = %d;\n", a, b);
+
+  swap_int(&a, &b);
+
+  printf("Correct output: a = %d; b = %d;\n", a, b);
+
+  a = 1024;
+  b = -4096;
+  printf("Correct output: a = %d; b = %d;\n", a, b);
+
+  a = INT_MAX;
+  b = INT_MIN;
+  printf("Correct output: a = %d; b = %d;\n", a, b);
+
+  return (0); // Return SUCCESS
 }
